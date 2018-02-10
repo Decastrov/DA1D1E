@@ -6,18 +6,6 @@ public class Baraja {
 	Stack<Carta> cartas;
 	public void Barajar() {
 		Collections.shuffle(cartas);
-		/*
-		Carta aux;		
-		int pos;		
-		// en cada pasada se escoge qué número va a ir a la posición i
-		for(int i = 0; i < this.cartas.size() - 1; i++){
-			// se escoge una posición aleatoria entre 0 y N - 1 - i
-			pos = (int) (Math.random() * (this.cartas.size() -i)) + i;
-			// se intercambia el número en esa posición con el de la posición i
-			aux = this.cartas.get(i);
-			this.cartas.set(i, this.cartas.get(pos));
-			this.cartas.set(pos, aux);
-		}*/
 	}
 	
 	/**
