@@ -143,10 +143,11 @@ public class Brisca{
 		}
 		return puntosJugador;
 	}
-	@SuppressWarnings("unchecked")
-	public static void robarCarta(Baraja baraja, @SuppressWarnings("rawtypes") Vector<Carta> manos) {
+	
+	public static void robarCarta(Baraja baraja, Vector<Carta> manos) {
 		manos.add(baraja.DarCarta());
 	}
+	@SuppressWarnings("unchecked")
 	public static void robarDespues(Baraja baraja, int mano, @SuppressWarnings("rawtypes") Vector manos[]) {
 		if(baraja.getCartas().size()>0) {
 			if(mano==1) {
@@ -158,7 +159,7 @@ public class Brisca{
 			}
 		}
 	}
-	public Carta jugadaCPU(Vector manos, int mano) {
+	public Carta jugadaCPU(@SuppressWarnings("rawtypes") Vector manos, int mano) {
 		Carta ordenador=null;
 		int x;
 		if(mano==1) {
@@ -173,7 +174,8 @@ public class Brisca{
 		return ordenador;
 		
 	}
-	public Carta jugadaHumano(Vector manos) {
+	public Carta jugadaHumano(@SuppressWarnings("rawtypes") Vector manos) {
+		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner (System.in);
 		Carta humano;
 		int x;
